@@ -1,8 +1,7 @@
 // login-engine.js — Ultra-premium SaaS Login State Machine
 // Author: WebmigoSaaS Frontend UX
 //
-// Loads on: /front/login/login.php (see HTML template)
-// No hardcoded domains. All branding/data via #login-root data-attributes.
+
 
 (function() {
   'use strict';
