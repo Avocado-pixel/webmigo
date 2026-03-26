@@ -1,4 +1,4 @@
-/* login-theme.css — ELIMINACIÓN DE CONFLICTOS Y CENTRADO ABSOLUTO */
+/* login-theme.css — MASTER CONTAINER ARCHITECTURE */
 :root {
   --primary-color: 0, 123, 255;
   --bg-gradient-start: #1a1c2e;
@@ -8,84 +8,104 @@
   --text-muted: #64748b;
 }
 
-/* Reset total para anular Tabler */
+/* Reset de Tabler */
 html, body {
     margin: 0 !important;
     padding: 0 !important;
-    width: 100% !important;
     height: 100% !important;
-    min-height: 100vh !important;
+    width: 100% !important;
+    overflow: hidden !important;
 }
 
-/* El fondo ocupa toda la pantalla y centra el contenido */
-.login-page-container {
-    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end)) !important;
+/* 1. La base que centra TODO */
+.master-viewport {
     width: 100vw !important;
-    height: 100vh !important;
     height: 100dvh !important;
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end)) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    position: fixed !important; /* Para que no se mueva con scrolls raros de Tabler */
+    position: fixed !important;
     top: 0;
     left: 0;
 }
 
-/* El wrapper asegura que tarjeta y footer estén en la misma columna */
-.login-wrapper {
+/* 2. El "Algo más grande" que pediste */
+.master-container {
     display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
+    flex-direction: column !important; /* Fuerza Arriba -> Abajo */
+    align-items: center !important;    /* Centra horizontalmente los hijos */
     width: 100% !important;
-    max-width: 420px !important; /* Ancho máximo de la tarjeta */
-    padding: 20px !important;
+    max-width: 420px !important;
+    padding: 20px;
     box-sizing: border-box !important;
+    animation: slideIn 0.5s ease-out;
 }
 
-/* La tarjeta ahora heredará el centro */
+/* 3. Estilo de la Tarjeta */
+.login-card-box {
+    width: 100% !important;
+}
+
 .card-md {
     width: 100% !important;
     background: var(--card-bg) !important;
-    border-radius: 1rem !important;
+    border-radius: 1.25rem !important;
+    padding: 1rem !important;
     border: none !important;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
-    margin: 0 !important; /* Quitamos márgenes de Tabler */
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5) !important;
 }
 
-/* El footer ahora está forzado al centro */
-.login-footer {
-    width: 100% !important;
-    text-align: center !important;
+/* 4. Estilo del Mensaje (Footer) */
+.master-footer {
     margin-top: 1.5rem !important;
     color: var(--text-muted) !important;
-    font-size: 0.8rem !important;
-    opacity: 0.8;
+    font-size: 0.85rem !important;
+    text-align: center !important;
+    width: 100% !important;
+    opacity: 0.7;
+    font-weight: 500;
 }
 
-/* Ajustes de los campos OTP para que no se desmadren */
+/* Ajuste de inputs OTP */
 .otp-input-group {
-    display: flex !important;
-    justify-content: space-between !important;
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
     gap: 8px !important;
-    margin: 20px 0 !important;
+    margin: 1.5rem 0 !important;
 }
 
 .otp-field {
     width: 100% !important;
-    max-width: 45px !important;
-    height: 55px !important;
+    height: 50px !important;
     text-align: center !important;
-    font-size: 1.5rem !important;
-    font-weight: bold !important;
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
     border: 2px solid #e2e8f0 !important;
     border-radius: 0.5rem !important;
+    background: #fff !important;
 }
 
-/* Resto de estilos de botones que ya tenías... */
+.otp-field:focus {
+    border-color: rgb(var(--primary-color)) !important;
+    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.1) !important;
+    outline: none !important;
+}
+
+/* Botón Premium */
 .btn-primary {
     background: rgb(var(--primary-color)) !important;
     border: none !important;
-    padding: 12px !important;
+    height: 50px !important;
+    border-radius: 0.75rem !important;
     font-weight: 700 !important;
+    font-size: 1rem !important;
+    transition: transform 0.2s !important;
+}
+
+.btn-primary:hover { transform: translateY(-2px) !important; }
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
