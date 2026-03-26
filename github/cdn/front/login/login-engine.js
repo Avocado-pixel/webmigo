@@ -1,96 +1,186 @@
 (function() {
     'use strict';
 
-    const root = document.getElementById('login-root');
-    const data = {
-        logo: root.getAttribute('data-logo'),
-        company: root.getAttribute('data-company-name'),
-        csrf: root.getAttribute('data-csrf')
-    };
-
-    // Temas dinámicos
+    // ==========================================
+    // 1. LÓGICA DE TEMAS (Diseño Original)
+    // ==========================================
     const themes = [
         { background: "#1A1A2E", color: "#FFFFFF", primaryColor: "#0F3460" },
         { background: "#461220", color: "#FFFFFF", primaryColor: "#E94560" },
         { background: "#192A51", color: "#FFFFFF", primaryColor: "#967AA1" },
-        { background: "#231F20", color: "#FFFFFF", primaryColor: "#BB4430" }
+        { background: "#F7B267", color: "#000000", primaryColor: "#F4845F" },
+        { background: "#F25F5C", color: "#000000", primaryColor: "#642B36" },
+        { background: "#231F20", color: "#FFF", primaryColor: "#BB4430" }
     ];
 
-    const setTheme = (t) => {
-        document.documentElement.style.setProperty("--background", t.background);
-        document.documentElement.style.setProperty("--color", t.color);
-        document.documentElement.style.setProperty("--primary-color", t.primaryColor);
+    const setTheme = (theme) => {
+        const root = document.querySelector(":root");
+        root.style.setProperty("--background", theme.background);
+        root.style.setProperty("--color", theme.color);
+        root.style.setProperty("--primary-color", theme.primaryColor);
     };
 
-    const btnContainer = document.querySelector(".theme-btn-container");
-    themes.forEach(t => {
-        const div = document.createElement("div");
-        div.className = "theme-btn";
-        div.style.background = t.primaryColor;
-        div.onclick = () => setTheme(t);
-        btnContainer.appendChild(div);
-    });
+    const displayThemeButtons = () => {
+        const btnContainer = document.querySelector(".theme-btn-container");
+        if(!btnContainer) return;
+        themes.forEach((theme) => {
+            const div = document.createElement("div");
+            div.className = "theme-btn";
+            div.style.cssText = `background: ${theme.background}; width: 25px; height: 25px`;
+            btnContainer.appendChild(div);
+            div.addEventListener("click", () => setTheme(theme));
+        });
+    };
+    displayThemeButtons();
 
-    // Lógica de Login
+    // ==========================================
+    // 2. LÓGICA DE LOGIN SAAS (Dual-OTP)
+    // ==========================================
+    const rootEl = document.getElementById('login-root');
+    if (!rootEl) return;
+    const csrfToken = rootEl.getAttribute('data-csrf');
+
     let state = 'credentials';
     const form = document.getElementById('loginForm');
+    const alertBox = document.getElementById('loginAlert');
+    const alertText = document.getElementById('loginAlertText');
     const btnSubmit = document.getElementById('btnLogin');
+    const stepCreds = document.getElementById('stepCredentials');
+    const stepOTP = document.getElementById('stepOTP');
+    const mainTitle = document.getElementById('mainTitle');
+    const btnBack = document.getElementById('btnBack');
+    const btnForgot = document.getElementById('btnForgot');
+    const otpFields = document.querySelectorAll('.otp-field');
 
-    form.onsubmit = async (e) => {
+    function showAlert(msg) {
+        alertText.textContent = msg;
+        alertBox.style.display = 'block';
+    }
+
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
+        alertBox.style.display = 'none';
+        btnSubmit.innerText = "WAIT...";
         btnSubmit.disabled = true;
-        btnSubmit.innerText = "...";
 
         if (state === 'credentials') {
-            const email = document.getElementById('inputEmail').value;
+            const email = document.getElementById('inputEmail').value.trim();
             const password = document.getElementById('inputPassword').value;
 
+            if (!email || !password) {
+                showAlert('Complete all fields');
+                btnSubmit.innerText = "SUBMIT";
+                btnSubmit.disabled = false;
+                return;
+            }
+
             try {
                 const res = await fetch('/back/index.php', {
                     method: 'POST',
+                    credentials: 'include',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ action: 'sys_login_x1', email, password, csrf_token: data.csrf })
+                    body: JSON.stringify({ action: 'sys_login_x1', email, password, csrf_token: csrfToken })
                 });
-                const json = await res.json();
+                const data = await res.json();
 
-                if (json.status === 'requires_2fa' || json.status === 'requires_email_otp') {
+                if (data.status === 'requires_2fa' || data.status === 'requires_email_otp') {
                     state = 'otp';
-                    document.getElementById('tempToken').value = json.temp_token;
-                    document.getElementById('otpMethod').value = json.status === 'requires_2fa' ? 'totp' : 'email';
-                    document.getElementById('stepCredentials').style.display = 'none';
-                    document.getElementById('stepOTP').style.display = 'block';
-                    document.getElementById('btnBackToLogin').style.display = 'inline';
-                    btnSubmit.innerText = "VERIFY";
-                } else if (json.status === 'success') {
-                    window.location.href = './';
+                    document.getElementById('tempToken').value = data.temp_token;
+                    document.getElementById('otpMethod').value = data.status === 'requires_2fa' ? 'totp' : 'email';
+                    
+                    // Cambiar UI al paso OTP
+                    stepCreds.style.display = 'none';
+                    stepOTP.style.display = 'block';
+                    mainTitle.innerText = "VERIFY";
+                    btnSubmit.innerText = "VERIFY CODE";
+                    btnBack.style.display = 'inline';
+                    btnForgot.style.display = 'none';
+                    otpFields[0].focus();
+
+                } else if (data.status === 'success') {
+                    window.location.href = 'index.php';
                 } else {
-                    alert(json.message);
+                    showAlert(data.message || 'Login failed.');
+                    btnSubmit.innerText = "SUBMIT";
                 }
-            } catch (err) { alert("Error de conexión"); }
+            } catch (err) {
+                showAlert('Network error.');
+                btnSubmit.innerText = "SUBMIT";
+            }
+            btnSubmit.disabled = false;
+
         } else {
-            // Lógica OTP
-            const code = Array.from(document.querySelectorAll('.otp-field')).map(f => f.value).join('');
-            const action = document.getElementById('otpMethod').value === 'totp' ? 'api_auth_verify_login_2fa' : 'api_auth_verify_login_otp';
-            
+            // Validar OTP
+            const code = Array.from(otpFields).map(f => f.value).join('');
+            if (code.length !== 6) {
+                showAlert('Enter 6 digits');
+                btnSubmit.innerText = "VERIFY CODE";
+                btnSubmit.disabled = false;
+                return;
+            }
+
+            const method = document.getElementById('otpMethod').value;
+            const tempToken = document.getElementById('tempToken').value;
+
             try {
                 const res = await fetch('/back/index.php', {
                     method: 'POST',
+                    credentials: 'include',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ action, temp_token: document.getElementById('tempToken').value, code, csrf_token: data.csrf })
+                    body: JSON.stringify({ 
+                        action: method === 'totp' ? 'api_auth_verify_login_2fa' : 'api_auth_verify_login_otp',
+                        temp_token: tempToken, 
+                        code, 
+                        csrf_token: csrfToken 
+                    })
                 });
-                const json = await res.json();
-                if (json.status === 'success') window.location.href = './';
-                else alert(json.message);
-            } catch (err) { alert("Error"); }
-        }
-        btnSubmit.disabled = false;
-        btnSubmit.innerText = state === 'credentials' ? "SUBMIT" : "VERIFY";
-    };
+                const data = await res.json();
 
-    // Auto-salto de campos OTP
-    const fields = document.querySelectorAll('.otp-field');
-    fields.forEach((f, i) => {
-        f.oninput = () => { if (f.value && fields[i+1]) fields[i+1].focus(); };
+                if (data.status === 'success') {
+                    window.location.href = 'index.php';
+                } else {
+                    showAlert(data.message || 'Invalid code.');
+                    btnSubmit.innerText = "VERIFY CODE";
+                    otpFields.forEach(f => f.value = '');
+                    otpFields[0].focus();
+                }
+            } catch (err) {
+                showAlert('Network error.');
+                btnSubmit.innerText = "VERIFY CODE";
+            }
+            btnSubmit.disabled = false;
+        }
+    });
+
+    // UX de los campos OTP (saltar al siguiente)
+    otpFields.forEach((field, idx) => {
+        field.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value && idx < otpFields.length - 1) {
+                otpFields[idx + 1].focus();
+            }
+            if (Array.from(otpFields).every(f => f.value.length === 1)) {
+                form.requestSubmit();
+            }
+        });
+        field.addEventListener('keydown', function(e) {
+            if (e.key === 'Backspace' && !this.value && idx > 0) {
+                otpFields[idx - 1].focus();
+            }
+        });
+    });
+
+    // Botón de regreso
+    btnBack.addEventListener('click', function(e) {
+        e.preventDefault();
+        state = 'credentials';
+        stepOTP.style.display = 'none';
+        stepCreds.style.display = 'block';
+        mainTitle.innerText = "LOGIN";
+        btnSubmit.innerText = "SUBMIT";
+        btnBack.style.display = 'none';
+        btnForgot.style.display = 'inline';
+        alertBox.style.display = 'none';
     });
 
 })();
