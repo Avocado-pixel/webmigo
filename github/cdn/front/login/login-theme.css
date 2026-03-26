@@ -1,4 +1,4 @@
-/* login-theme.css — Corregido para centrado absoluto */
+/* login-theme.css — ELIMINACIÓN DE CONFLICTOS Y CENTRADO ABSOLUTO */
 :root {
   --primary-color: 0, 123, 255;
   --bg-gradient-start: #1a1c2e;
@@ -6,73 +6,86 @@
   --card-bg: rgba(255, 255, 255, 0.98);
   --text-main: #1e293b;
   --text-muted: #64748b;
-  --transition: 0.3s cubic-bezier(.4,0,.2,1);
 }
 
-/* Forzamos que nada se escape del viewport */
+/* Reset total para anular Tabler */
 html, body {
-  margin: 0 !important;
-  padding: 0 !important;
-  height: 100% !important;
-  width: 100% !important;
-  overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100vh !important;
 }
 
-.login-bg {
-  width: 100vw;
-  height: 100dvh; /* Altura dinámica para móviles */
-  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-  display: flex;
-  align-items: center;    /* Centrado Vertical */
-  justify-content: center; /* Centrado Horizontal */
-  position: relative;
+/* El fondo ocupa toda la pantalla y centra el contenido */
+.login-page-container {
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end)) !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: fixed !important; /* Para que no se mueva con scrolls raros de Tabler */
+    top: 0;
+    left: 0;
 }
 
-/* El Wrapper que contiene la tarjeta y el footer */
+/* El wrapper asegura que tarjeta y footer estén en la misma columna */
 .login-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 420px;
-  padding: 1rem;
-  z-index: 10;
-  animation: fadeInDown 0.6s ease-out;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 420px !important; /* Ancho máximo de la tarjeta */
+    padding: 20px !important;
+    box-sizing: border-box !important;
 }
 
-.login-card {
-  width: 100%;
-}
-
+/* La tarjeta ahora heredará el centro */
 .card-md {
-  background: var(--card-bg) !important;
-  border-radius: 1.25rem !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
-  backdrop-filter: blur(10px);
-  padding: 1rem; /* Espacio extra interno */
+    width: 100% !important;
+    background: var(--card-bg) !important;
+    border-radius: 1rem !important;
+    border: none !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
+    margin: 0 !important; /* Quitamos márgenes de Tabler */
 }
 
-/* Animación de entrada */
-@keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* El footer ahora está forzado al centro */
+.login-footer {
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: 1.5rem !important;
+    color: var(--text-muted) !important;
+    font-size: 0.8rem !important;
+    opacity: 0.8;
 }
 
-/* El resto del código (OTP, botones, inputs) sigue igual... */
+/* Ajustes de los campos OTP para que no se desmadren */
 .otp-input-group {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0.5rem;
-  margin: 1.5rem 0;
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    margin: 20px 0 !important;
 }
+
 .otp-field {
-  width: 100%;
-  height: 3.5rem;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  border: 2px solid #e2e8f0;
-  border-radius: 0.6rem;
+    width: 100% !important;
+    max-width: 45px !important;
+    height: 55px !important;
+    text-align: center !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    border: 2px solid #e2e8f0 !important;
+    border-radius: 0.5rem !important;
+}
+
+/* Resto de estilos de botones que ya tenías... */
+.btn-primary {
+    background: rgb(var(--primary-color)) !important;
+    border: none !important;
+    padding: 12px !important;
+    font-weight: 700 !important;
 }
