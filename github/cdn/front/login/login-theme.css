@@ -1,86 +1,214 @@
-/* login-theme.css — ESTRUCTURA DE HIERRO */
+/*
+ * WebmigoSaaS — Ultra-Premium Login Theme (Aura & Glass Edition)
+ * Inspired by Stripe, Apple, and Linear.
+ */
+
 :root {
-  --primary-color: 0, 123, 255;
-  --bg-gradient-start: #1a1c2e;
-  --bg-gradient-end: #0f172a;
-  --card-bg: rgba(255, 255, 255, 0.98);
-  --text-main: #1e293b;
-  --text-muted: #64748b;
+  --primary-rgb: var(--primary-color); /* Recibe R, G, B desde el PHP */
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --error-red: #ef4444;
 }
 
-/* Forzar que el body no interfiera */
-body {
-    display: block !important;
-    background: var(--bg-gradient-start) !important;
+/* 1. RESET Y BASE */
+* { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+
+body, html {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow: hidden;
 }
 
-/* Contenedor que ocupa toda la pantalla */
-#big-wrapper-ultra {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100dvh !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end)) !important;
-    z-index: 99999 !important;
+/* 2. FONDO DINÁMICO (Aura Mesh) */
+.master-viewport {
+  width: 100vw; height: 100dvh;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(var(--primary-rgb), 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(var(--primary-rgb), 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(var(--primary-rgb), 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(var(--primary-rgb), 0.1) 0px, transparent 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 9999;
 }
 
-/* La columna central que agrupa tarjeta y footer */
-#central-column-box {
-    display: flex !important;
-    flex-direction: column !important; /* IMPORTANTE: Esto pone uno debajo de otro */
-    align-items: center !important;
-    width: 100% !important;
-    max-width: 410px !important;
-    padding: 20px !important;
+/* Animación sutil de los colores de fondo */
+@keyframes auraMove {
+  0% { filter: hue-rotate(0deg) brightness(1); }
+  50% { filter: hue-rotate(15deg) brightness(1.05); }
+  100% { filter: hue-rotate(0deg) brightness(1); }
+}
+.master-viewport::after {
+  content: ""; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  animation: auraMove 10s infinite ease-in-out;
 }
 
-/* La caja de la tarjeta */
-#login-card-container {
-    width: 100% !important;
-    display: block !important;
-    margin-bottom: 20px !important; /* Espacio con el footer */
+/* 3. CONTENEDOR MAESTRO */
+.master-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 440px;
+  padding: 20px;
+  z-index: 100;
 }
 
-/* La tarjeta real */
+/* 4. LA TARJETA (The Masterpiece) */
 .card-md {
-    width: 100% !important;
-    background: var(--card-bg) !important;
-    border-radius: 1.25rem !important;
-    border: none !important;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5) !important;
-    margin: 0 !important;
+  width: 100% !important;
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-radius: 24px !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4) !important;
+  padding: 10px !important;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease !important;
 }
 
-/* El footer maldito */
-#footer-message-ultra {
-    display: block !important;
-    width: 100% !important;
-    text-align: center !important;
-    color: var(--text-muted) !important;
-    font-size: 0.85rem !important;
-    font-weight: 500 !important;
-    clear: both !important; /* Anula cualquier float */
-    margin: 0 !important;
-    padding: 0 !important;
+.card-md:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
 }
 
-/* Estilos de OTP e inputs se mantienen... */
+/* 5. TIPOGRAFÍA Y MARCA */
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.04em;
+}
+
+.text-secondary {
+  color: var(--text-muted) !important;
+  font-size: 0.95rem;
+}
+
+/* 6. INPUTS (Stripe Style) */
+.form-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-control {
+  height: 52px;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  padding: 0 16px !important;
+  font-size: 1rem !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+}
+
+.form-control:focus {
+  background: #fff !important;
+  border-color: rgb(var(--primary-rgb)) !important;
+  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.15) !important;
+  outline: none;
+}
+
+/* 7. BOTÓN PRINCIPAL */
+.btn-primary {
+  height: 52px;
+  background: rgb(var(--primary-rgb)) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(var(--primary-rgb), 0.4) !important;
+  filter: brightness(1.1);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* 8. OTP UX (The Grid) */
 .otp-input-group {
-    display: grid !important;
-    grid-template-columns: repeat(6, 1fr) !important;
-    gap: 8px !important;
-    margin: 1.5rem 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important;
+  gap: 10px !important;
+  margin: 24px 0 !important;
 }
+
 .otp-field {
-    width: 100% !important;
-    height: 50px !important;
-    text-align: center !important;
-    font-size: 1.4rem !important;
-    font-weight: 800 !important;
-    border: 2px solid #e2e8f0 !important;
-    border-radius: 0.5rem !important;
+  width: 100% !important;
+  height: 60px !important;
+  text-align: center !important;
+  font-size: 1.6rem !important;
+  font-weight: 800 !important;
+  border-radius: 12px !important;
+  border: 2px solid #e2e8f0 !important;
+  background: #fff !important;
+  transition: all 0.2s ease !important;
 }
+
+.otp-field:focus {
+  border-color: rgb(var(--primary-rgb)) !important;
+  box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.1) !important;
+  transform: scale(1.05);
+}
+
+/* 9. FEEDBACK */
+.alert-danger {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border: 1px solid rgba(239, 68, 68, 0.2) !important;
+  color: var(--error-red) !important;
+  border-radius: 12px !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 12px !important;
+}
+
+/* 10. FOOTER */
+.master-footer-text {
+  margin-top: 2rem !important;
+  font-size: 0.85rem !important;
+  color: var(--text-muted) !important;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+}
+
+/* ANIMACIONES */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+.shake { animation: shake 0.4s ease-in-out; }
+
+.loading { color: transparent !important; position: relative; }
+.loading::after {
+  content: "";
+  position: absolute; width: 20px; height: 20px;
+  top: 50%; left: 50%; margin: -10px 0 0 -10px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-top-color: #fff; border-radius: 50%;
+  animation: spin 0.8s infinite linear;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
