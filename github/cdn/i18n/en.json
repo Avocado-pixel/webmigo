@@ -1,0 +1,73 @@
+{
+  "_metadata": {
+    "language": "en",
+    "version": "1.0.0",
+    "last_updated": "2026-04-01",
+    "translator": "WebmigoSaaS"
+  },
+
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "book_now": "Book Now",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "title": "Book Your Perfect Appointment",
+    "subtitle": "Professional barbershop services",
+    "tagline_1": "Haircut • Beard Trim • Styling",
+    "tagline_2": "Premium Grooming • Expert Stylists",
+    "tagline_3": "Walk-ins Welcome • Online Booking Available"
+  },
+
+  "booking": {
+    "title": "📅 Schedule Your Appointment",
+    "select_location": "Select Location",
+    "select_barber": "Choose Your Barber",
+    "select_service": "Choose Service",
+    "select_date": "Date",
+    "select_time": "Time",
+    "ph_branch": "-- Choose your nearest branch --",
+    "ph_barber": "-- Select a barber --",
+    "ph_service": "-- Select a service --",
+    "btn_book": "Book Appointment",
+    "btn_cancel": "Cancel"
+  },
+
+  "info": {
+    "location": "📍 Our Location",
+    "services": "✂️ Our Services",
+    "barbers": "👨‍🦰 Our Barbers",
+    "services_count_msg": "Professional services available",
+    "info_barbers": "Experienced barbers at your service"
+  },
+
+  "labels": {
+    "address_label": "Address",
+    "phone_label": "Phone",
+    "hours_label": "Hours",
+    "call": "Call Now"
+  },
+
+  "footer": {
+    "copyright": "&copy; 2026. All rights reserved.",
+    "powered": "Powered by WebmigoSaaS"
+  },
+
+  "languages": {
+    "lang_en": "English",
+    "lang_es": "Español",
+    "lang_pt": "Português"
+  },
+
+  "messages": {
+    "success": "Success!",
+    "error": "Error",
+    "loading": "Loading...",
+    "please_wait": "Please wait",
+    "booking_confirmed": "Your appointment has been confirmed!",
+    "booking_failed": "Booking failed. Please try again.",
+    "invalid_input": "Invalid input. Please check your data."
+  }
+}

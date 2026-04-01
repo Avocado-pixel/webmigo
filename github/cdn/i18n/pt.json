@@ -1,0 +1,73 @@
+{
+  "_metadata": {
+    "language": "pt",
+    "version": "1.0.0",
+    "last_updated": "2026-04-01",
+    "translator": "WebmigoSaaS"
+  },
+
+  "navigation": {
+    "home": "Início",
+    "services": "Serviços",
+    "book_now": "Reserve Agora",
+    "contact": "Contato"
+  },
+
+  "hero": {
+    "title": "Reserve Seu Agendamento Perfeito",
+    "subtitle": "Serviços profissionais de barbearia",
+    "tagline_1": "Corte • Aparado de Barba • Penteado",
+    "tagline_2": "Higiene Premium • Estilistas Experientes",
+    "tagline_3": "Sem Agendamento • Reserva Online Disponível"
+  },
+
+  "booking": {
+    "title": "📅 Agende Seu Horário",
+    "select_location": "Selecione Localização",
+    "select_barber": "Escolha Seu Barbeiro",
+    "select_service": "Escolha Serviço",
+    "select_date": "Data",
+    "select_time": "Hora",
+    "ph_branch": "-- Escolha sua filial mais próxima --",
+    "ph_barber": "-- Selecione um barbeiro --",
+    "ph_service": "-- Selecione um serviço --",
+    "btn_book": "Agendar",
+    "btn_cancel": "Cancelar"
+  },
+
+  "info": {
+    "location": "📍 Nossa Localização",
+    "services": "✂️ Nossos Serviços",
+    "barbers": "👨‍🦰 Nossos Barbeiros",
+    "services_count_msg": "Serviços profissionais disponíveis",
+    "info_barbers": "Barbeiros experientes ao seu serviço"
+  },
+
+  "labels": {
+    "address_label": "Endereço",
+    "phone_label": "Telefone",
+    "hours_label": "Horário",
+    "call": "Ligue Agora"
+  },
+
+  "footer": {
+    "copyright": "&copy; 2026. Todos os direitos reservados.",
+    "powered": "Desenvolvido por WebmigoSaaS"
+  },
+
+  "languages": {
+    "lang_en": "English",
+    "lang_es": "Español",
+    "lang_pt": "Português"
+  },
+
+  "messages": {
+    "success": "Sucesso!",
+    "error": "Erro",
+    "loading": "Carregando...",
+    "please_wait": "Por favor, aguarde",
+    "booking_confirmed": "Seu agendamento foi confirmado!",
+    "booking_failed": "Falha no agendamento. Por favor, tente novamente.",
+    "invalid_input": "Entrada inválida. Por favor, verifique seus dados."
+  }
+}
