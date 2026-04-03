@@ -1,73 +1,63 @@
 {
-  "_metadata": {
-    "language": "pt",
-    "version": "1.0.0",
-    "last_updated": "2026-04-01",
-    "translator": "WebmigoSaaS"
-  },
-
-  "navigation": {
-    "home": "Início",
+  "_metadata": { "language": "pt", "version": "1.2.0" },
+  "nav": {
     "services": "Serviços",
-    "book_now": "Reserve Agora",
-    "contact": "Contato"
+    "about": "Equipa",
+    "branches": "Sedes",
+    "book_now": "Reserve Agora"
   },
-
   "hero": {
-    "title": "Reserve Seu Agendamento Perfeito",
-    "subtitle": "Serviços profissionais de barbearia",
-    "tagline_1": "Corte • Aparado de Barba • Penteado",
-    "tagline_2": "Higiene Premium • Estilistas Experientes",
-    "tagline_3": "Sem Agendamento • Reserva Online Disponível"
+    "badge": "Eleve o seu Estilo",
+    "promo": "Suba de Nível",
+    "cta": "Onde a mestria encontra a excelência. Garanta o seu lugar na nossa agenda imediatamente."
   },
-
-  "booking": {
-    "title": "📅 Agende Seu Horário",
-    "select_location": "Selecione Localização",
-    "select_barber": "Escolha Seu Barbeiro",
-    "select_service": "Escolha Serviço",
-    "select_date": "Data",
-    "select_time": "Hora",
-    "ph_branch": "-- Escolha sua filial mais próxima --",
-    "ph_barber": "-- Selecione um barbeiro --",
-    "ph_service": "-- Selecione um serviço --",
-    "btn_book": "Agendar",
-    "btn_cancel": "Cancelar"
+  "marquee": [
+    "EXCELÊNCIA", "ATITUDE", "PRECISÃO", "VANGUARDA", "ESTILO", "PROFISSIONALISMO", "TRADIÇÃO", "MAESTRIA", 
+    "QUALIDADE", "DETALHES", "LUXO", "BEM-ESTAR", "DEDICAÇÃO", "ARTE", "INOVAÇÃO", "PRESTÍGIO", "EXPERIÊNCIA", 
+    "PAIXÃO", "PERFEIÇÃO", "EXCLUSIVIDADE", "RITUAL", "VIGOR", "ESTÉTICA", "IDENTIDADE", "CUIDADO", "DISTINÇÃO", 
+    "ELEGÂNCIA", "DIFERENÇA", "TALENTO", "SOFISTICAÇÃO"
+  ],
+  "sections": {
+    "services_title": "Nossa Carta",
+    "services_sub": "Escolha o equipamento para a sua transformação.",
+    "team_title": "Especialistas",
+    "team_sub": "Mestres dedicados a aperfeiçoar a sua imagem.",
+    "locations_title": "Nossas Filiais",
+    "view_map": "Ver Mapa / Rota"
   },
-
-  "info": {
-    "location": "📍 Nossa Localização",
-    "services": "✂️ Nossos Serviços",
-    "barbers": "👨‍🦰 Nossos Barbeiros",
-    "services_count_msg": "Serviços profissionais disponíveis",
-    "info_barbers": "Barbeiros experientes ao seu serviço"
-  },
-
-  "labels": {
-    "address_label": "Endereço",
-    "phone_label": "Telefone",
-    "hours_label": "Horário",
-    "call": "Ligue Agora"
-  },
-
   "footer": {
-    "copyright": "&copy; 2026. Todos os direitos reservados.",
-    "powered": "Desenvolvido por WebmigoSaaS"
+    "contact_info": "Contacto / Info",
+    "schedule": "HORÁRIO",
+    "secure_booking": "NÃO FIQUE DE FORA",
+    "secure_booking_sub": "Garanta o seu lugar agora mesmo.",
+    "privacy": "Privacidade",
+    "terms": "Termos"
   },
-
-  "languages": {
-    "lang_en": "English",
-    "lang_es": "Español",
-    "lang_pt": "Português"
+  "booking": {
+    "step": "PASSO",
+    "step_of": "DE",
+    "title_step1": "SELECIONAR EQUIPAMENTO",
+    "title_step2": "AGENDA E EQUIPA",
+    "title_step3": "VALIDAÇÃO FINAL",
+    "select_location": "SELECIONAR SEDE",
+    "select_service": "SELECIONAR SERVIÇOS",
+    "select_specialist": "SELECIONAR PROFISSIONAL",
+    "select_date": "SELECIONAR DATA",
+    "select_time": "HORÁRIOS DISPONÍVEIS",
+    "no_slots": "SEM DISPONIBILIDADE NESTE DIA",
+    "checking": "A CONSULTAR SISTEMA...",
+    "full_name": "Nome Completo",
+    "phone": "Telemóvel de Contacto",
+    "email": "Correio Eletrónico",
+    "back": "VOLTAR",
+    "next": "SEGUINTE",
+    "confirm": "CONFIRMAR RESERVA",
+    "success_title": "RESERVA CONFIRMADA",
+    "success_sub": "Enviamos um e-mail de confirmação para si."
   },
-
-  "messages": {
-    "success": "Sucesso!",
-    "error": "Erro",
-    "loading": "Carregando...",
-    "please_wait": "Por favor, aguarde",
-    "booking_confirmed": "Seu agendamento foi confirmado!",
-    "booking_failed": "Falha no agendamento. Por favor, tente novamente.",
-    "invalid_input": "Entrada inválida. Por favor, verifique seus dados."
+  "legal": {
+    "cookie_title": "COOKIES E PRIVACIDADE",
+    "cookie_text": "Utilizamos cookies essenciais para operar esta plataforma de reservas de forma segura.",
+    "accept": "ACEITAR"
   }
 }

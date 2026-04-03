@@ -1,73 +1,63 @@
 {
-  "_metadata": {
-    "language": "en",
-    "version": "1.0.0",
-    "last_updated": "2026-04-01",
-    "translator": "WebmigoSaaS"
-  },
-
-  "navigation": {
-    "home": "Home",
+  "_metadata": { "language": "en", "version": "1.2.0" },
+  "nav": {
     "services": "Services",
-    "book_now": "Book Now",
-    "contact": "Contact"
+    "about": "Crew",
+    "branches": "Locations",
+    "book_now": "Book Now"
   },
-
   "hero": {
-    "title": "Book Your Perfect Appointment",
-    "subtitle": "Professional barbershop services",
-    "tagline_1": "Haircut • Beard Trim • Styling",
-    "tagline_2": "Premium Grooming • Expert Stylists",
-    "tagline_3": "Walk-ins Welcome • Online Booking Available"
+    "badge": "Level Up Your Style",
+    "promo": "Upgrade Now",
+    "cta": "Where mastery meets excellence. Secure your space in our calendar instantly."
   },
-
-  "booking": {
-    "title": "📅 Schedule Your Appointment",
-    "select_location": "Select Location",
-    "select_barber": "Choose Your Barber",
-    "select_service": "Choose Service",
-    "select_date": "Date",
-    "select_time": "Time",
-    "ph_branch": "-- Choose your nearest branch --",
-    "ph_barber": "-- Select a barber --",
-    "ph_service": "-- Select a service --",
-    "btn_book": "Book Appointment",
-    "btn_cancel": "Cancel"
+  "marquee": [
+    "EXCELLENCE", "ATTITUDE", "PRECISION", "VANGUARD", "STYLE", "PROFESSIONALISM", "TRADITION", "MASTERY", 
+    "QUALITY", "DETAILS", "LUXURY", "WELLNESS", "DEDICATION", "ART", "INNOVATION", "PRESTIGE", "EXPERIENCE", 
+    "PASSION", "PERFECTION", "EXCLUSIVITY", "RITUAL", "VIGOR", "AESTHETICS", "IDENTITY", "CARE", "DISTINCTION", 
+    "ELEGANCE", "DIFFERENCE", "TALENT", "SOPHISTICATION"
+  ],
+  "sections": {
+    "services_title": "Our Menu",
+    "services_sub": "Choose the gear for your transformation.",
+    "team_title": "Specialists",
+    "team_sub": "Masters dedicated to perfecting your image.",
+    "locations_title": "Our Branches",
+    "view_map": "View Map / Route"
   },
-
-  "info": {
-    "location": "📍 Our Location",
-    "services": "✂️ Our Services",
-    "barbers": "👨‍🦰 Our Barbers",
-    "services_count_msg": "Professional services available",
-    "info_barbers": "Experienced barbers at your service"
-  },
-
-  "labels": {
-    "address_label": "Address",
-    "phone_label": "Phone",
-    "hours_label": "Hours",
-    "call": "Call Now"
-  },
-
   "footer": {
-    "copyright": "&copy; 2026. All rights reserved.",
-    "powered": "Powered by WebmigoSaaS"
+    "contact_info": "Contact / Info",
+    "schedule": "SCHEDULE",
+    "secure_booking": "DON'T MISS OUT",
+    "secure_booking_sub": "Secure your spot right now.",
+    "privacy": "Privacy",
+    "terms": "Terms"
   },
-
-  "languages": {
-    "lang_en": "English",
-    "lang_es": "Español",
-    "lang_pt": "Português"
+  "booking": {
+    "step": "STEP",
+    "step_of": "OF",
+    "title_step1": "SELECT GEAR",
+    "title_step2": "TIME & CREW",
+    "title_step3": "FINAL VALIDATION",
+    "select_location": "SELECT ARENA",
+    "select_service": "SELECT SERVICES",
+    "select_specialist": "SELECT SPECIALIST",
+    "select_date": "SELECT DATE",
+    "select_time": "DROP TIME",
+    "no_slots": "NO SLOTS AVAILABLE TODAY",
+    "checking": "CHECKING SYSTEM...",
+    "full_name": "Full Name",
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "back": "BACK",
+    "next": "NEXT",
+    "confirm": "CONFIRM BOOKING",
+    "success_title": "BOOKING CONFIRMED",
+    "success_sub": "We have sent a confirmation email to you."
   },
-
-  "messages": {
-    "success": "Success!",
-    "error": "Error",
-    "loading": "Loading...",
-    "please_wait": "Please wait",
-    "booking_confirmed": "Your appointment has been confirmed!",
-    "booking_failed": "Booking failed. Please try again.",
-    "invalid_input": "Invalid input. Please check your data."
+  "legal": {
+    "cookie_title": "COOKIES & PRIVACY",
+    "cookie_text": "We use essential cookies to operate this booking platform securely.",
+    "accept": "ACCEPT"
   }
 }

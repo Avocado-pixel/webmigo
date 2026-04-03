@@ -1,53 +1,63 @@
 {
-  "_metadata": { "language": "es", "version": "1.1.0" },
+  "_metadata": { "language": "es", "version": "1.2.0" },
   "nav": {
     "services": "Servicios",
-    "about": "El Equipo",
-    "branches": "Nuestras Sedes",
+    "about": "Nosotros",
+    "branches": "Sedes",
     "book_now": "Reserva Ahora"
   },
   "hero": {
+    "badge": "Eleva tu Experiencia",
     "promo": "Sube de Nivel",
-    "cta": "El ritual del cuidado masculino redefinido. Reserva tu turno en milisegundos."
+    "cta": "Donde la maestría se encuentra con la excelencia. Reserva tu espacio en nuestra agenda de forma inmediata."
   },
   "marquee": [
-    "EXCELENCIA", "ACTITUD", "PRECISIÓN", "VANGUARDIA", "ESTILO", "PROFESIONALISMO", "TRADICIÓN", "MAESTRÍA"
+    "EXCELENCIA", "ACTITUD", "PRECISIÓN", "VANGUARDIA", "ESTILO", "PROFESIONALISMO", "TRADICIÓN", "MAESTRÍA", 
+    "CALIDAD", "DETALLES", "LUJO", "BIENESTAR", "DEDICACIÓN", "ARTE", "INNOVACIÓN", "PRESTIGIO", "EXPERIENCIA", 
+    "PASIÓN", "PERFECCIÓN", "EXCLUSIVIDAD", "RITUAL", "VIGOR", "ESTÉTICA", "IDENTIDAD", "CUIDADO", "DISTINCIÓN", 
+    "ELEGANCIA", "DIFERENCIA", "TALENTO", "SOPHISTICATION"
   ],
   "sections": {
-    "services_title": "Nuestros Servicios",
-    "services_sub": "Elige tu equipamiento.",
-    "team_title": "Maestros",
-    "team_sub": "Especialistas a tu disposición.",
-    "locations_title": "Nuestras Sucursales",
-    "view_map": "Ver en Mapa"
+    "services_title": "Nuestra Carta",
+    "services_sub": "Selecciona el equipamiento para tu transformación.",
+    "team_title": "Especialistas",
+    "team_sub": "Maestros dedicados a perfeccionar tu imagen.",
+    "locations_title": "Nuestras Ubicaciones",
+    "view_map": "Ver Mapa / Ruta"
   },
   "footer": {
     "contact_info": "Contacto / Info",
-    "schedule": "Horario Operativo",
-    "secure_booking": "Asegura tu turno ahora mismo",
+    "schedule": "HORARIO",
+    "secure_booking": "NO TE QUEDES FUERA",
+    "secure_booking_sub": "Asegura tu turno ahora mismo.",
     "privacy": "Privacidad",
     "terms": "Términos"
   },
   "booking": {
-    "step1": "Seleccionar Servicio",
-    "step2": "Tiempo y Especialista",
-    "step3": "Tus Datos",
-    "select_branch": "Selecciona la Sucursal",
-    "select_service": "Elige Servicio",
-    "select_barber": "Elige Tu Barbero",
-    "date": "Fecha de Reserva",
-    "time": "Horarios Disponibles",
-    "no_slots": "Sin disponibilidad en esta fecha. Elige otra.",
+    "step": "PASO",
+    "step_of": "DE",
+    "title_step1": "SELECCIONA EQUIPAMIENTO",
+    "title_step2": "AGENDA Y EQUIPO",
+    "title_step3": "VALIDACIÓN FINAL",
+    "select_location": "SELECCIONAR SEDE",
+    "select_service": "SELECCIONAR SERVICIOS",
+    "select_specialist": "SELECCIONAR PROFESIONAL",
+    "select_date": "SELECCIONAR FECHA",
+    "select_time": "HORARIOS DISPONIBLES",
+    "no_slots": "SIN DISPONIBILIDAD EN ESTE DÍA",
+    "checking": "CONSULTANDO SISTEMA...",
     "full_name": "Nombre Completo",
-    "phone": "Teléfono",
+    "phone": "Teléfono de Contacto",
     "email": "Correo Electrónico",
-    "confirm": "Confirmar Reserva",
-    "success": "¡Reserva Confirmada!",
-    "confirm_email": "Te hemos enviado un correo con los detalles."
+    "back": "VOLVER",
+    "next": "SIGUIENTE",
+    "confirm": "CONFIRMAR RESERVA",
+    "success_title": "RESERVA CONFIRMADA",
+    "success_sub": "Te hemos enviado un correo de confirmación."
   },
   "legal": {
-    "cookie_title": "Cookies y Privacidad",
-    "cookie_text": "Utilizamos cookies para garantizar la seguridad de tus reservas.",
-    "accept": "Aceptar"
+    "cookie_title": "COOKIES Y PRIVACIDAD",
+    "cookie_text": "Utilizamos cookies esenciales para operar esta plataforma de reservas de forma segura.",
+    "accept": "ACEPTAR"
   }
 }
