@@ -1,0 +1,104 @@
+/* ============================================================
+   WebmigoSaaS — Global 404 CSS (VIP Edition)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+:root {
+    --vip-primary: #4318FF;
+    --vip-gradient: linear-gradient(135deg, #4318FF 0%, #868CFF 100%);
+    --vip-shadow: 0 10px 20px -5px rgba(67, 24, 255, 0.4);
+    --text-main: #2B3674;
+    --text-muted: #A3AED0;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.page_404 {
+    padding: 40px 0;
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* El contenedor del GIF */
+.four_zero_four_bg {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.four_zero_four_bg h1 {
+    font-size: 100px;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text-main);
+}
+
+/* Bloque de texto inferior */
+.content_box_404 {
+    margin-top: -50px;
+}
+
+.content_box_404 h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.content_box_404 p {
+    font-size: 18px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Botón VIP Neón */
+.link_404 {
+    display: inline-block;
+    padding: 14px 35px;
+    background: var(--vip-gradient);
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 25px 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--vip-shadow);
+}
+
+.link_404:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -5px rgba(67, 24, 255, 0.6);
+    opacity: 0.9;
+}
+
+.link_404:active {
+    transform: translateY(0);
+}
+
+/* Footer Studio */
+.footer_404 {
+    margin-top: 40px;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.footer_404 a {
+    color: var(--vip-primary);
+    text-decoration: none;
+    font-weight: 700;
+}

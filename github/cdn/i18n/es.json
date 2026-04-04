@@ -1,63 +1,18 @@
 {
-  "_metadata": { "language": "es", "version": "1.2.0" },
-  "nav": {
-    "services": "Servicios",
-    "about": "Nosotros",
-    "branches": "Sedes",
-    "book_now": "Reserva Ahora"
-  },
-  "hero": {
-    "badge": "Eleva tu Experiencia",
-    "promo": "Sube de Nivel",
-    "cta": "Donde la maestría se encuentra con la excelencia. Reserva tu espacio en nuestra agenda de forma inmediata."
-  },
+  "nav": { "services": "Servicios", "about": "Nosotros", "branches": "Sedes", "book_now": "Reserva Ahora" },
+  "hero": { "badge": "ELEVA TU NIVEL DE ESTILO", "promo": "Mejora tu Imagen", "cta": "Donde la maestría se encuentra con la excelencia. Reserva tu espacio de forma inmediata." },
   "marquee": [
     "EXCELENCIA", "ACTITUD", "PRECISIÓN", "VANGUARDIA", "ESTILO", "PROFESIONALISMO", "TRADICIÓN", "MAESTRÍA", 
     "CALIDAD", "DETALLES", "LUJO", "BIENESTAR", "DEDICACIÓN", "ARTE", "INNOVACIÓN", "PRESTIGIO", "EXPERIENCIA", 
     "PASIÓN", "PERFECCIÓN", "EXCLUSIVIDAD", "RITUAL", "VIGOR", "ESTÉTICA", "IDENTIDAD", "CUIDADO", "DISTINCIÓN", 
-    "ELEGANCIA", "DIFERENCIA", "TALENTO", "SOPHISTICATION"
+    "ELEGANCIA", "DIFERENCIA", "TALENTO", "SOFISTICACIÓN"
   ],
-  "sections": {
-    "services_title": "Nuestra Carta",
-    "services_sub": "Selecciona el equipamiento para tu transformación.",
-    "team_title": "Especialistas",
-    "team_sub": "Maestros dedicados a perfeccionar tu imagen.",
-    "locations_title": "Nuestras Ubicaciones",
-    "view_map": "Ver Mapa / Ruta"
-  },
-  "footer": {
-    "contact_info": "Contacto / Info",
-    "schedule": "HORARIO",
-    "secure_booking": "NO TE QUEDES FUERA",
-    "secure_booking_sub": "Asegura tu turno ahora mismo.",
-    "privacy": "Privacidad",
-    "terms": "Términos"
-  },
+  "sections": { "services_title": "Nuestra Carta", "team_title": "Especialistas", "locations_title": "Ubicaciones", "view_map": "Ver Mapa" },
+  "footer": { "schedule": "HORARIO", "secure_booking": "NO TE QUEDES FUERA", "privacy": "Privacidad", "terms": "Términos" },
   "booking": {
-    "step": "PASO",
-    "step_of": "DE",
-    "title_step1": "SELECCIONA EQUIPAMIENTO",
-    "title_step2": "AGENDA Y EQUIPO",
-    "title_step3": "VALIDACIÓN FINAL",
-    "select_location": "SELECCIONAR SEDE",
-    "select_service": "SELECCIONAR SERVICIOS",
-    "select_specialist": "SELECCIONAR PROFESIONAL",
-    "select_date": "SELECCIONAR FECHA",
-    "select_time": "HORARIOS DISPONIBLES",
-    "no_slots": "SIN DISPONIBILIDAD EN ESTE DÍA",
-    "checking": "CONSULTANDO SISTEMA...",
-    "full_name": "Nombre Completo",
-    "phone": "Teléfono de Contacto",
-    "email": "Correo Electrónico",
-    "back": "VOLVER",
-    "next": "SIGUIENTE",
-    "confirm": "CONFIRMAR RESERVA",
-    "success_title": "RESERVA CONFIRMADA",
-    "success_sub": "Te hemos enviado un correo de confirmación."
+    "step": "PASO", "step_of": "DE", "title_step1": "SELECCIONA EQUIPAMIENTO", "title_step2": "AGENDA Y EQUIPO", "title_step3": "VALIDACIÓN FINAL",
+    "select_branch": "SELECCIONAR SEDE", "select_service": "SERVICIOS DISPONIBLES", "select_barber": "NUESTRO EQUIPO", "date": "FECHA", "time": "HORARIOS",
+    "no_slots": "SIN DISPONIBILIDAD", "full_name": "Nombre Completo", "phone": "Teléfono", "email": "Email", "confirm": "CONFIRMAR", "back": "VOLVER", "next": "SIGUIENTE"
   },
-  "legal": {
-    "cookie_title": "COOKIES Y PRIVACIDAD",
-    "cookie_text": "Utilizamos cookies esenciales para operar esta plataforma de reservas de forma segura.",
-    "accept": "ACEPTAR"
-  }
+  "legal": { "cookie_title": "COOKIES Y PRIVACIDAD", "cookie_text": "Usamos cookies esenciales para tu seguridad.", "accept": "ACEPTAR" }
 }
