@@ -1,5 +1,6 @@
 
 
+
 :root {
     --tblr-font-sans-serif: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, sans-serif;
     --wmg-font-display: 'Fraunces', Georgia, serif;
@@ -292,11 +293,11 @@ a:hover {
 .card-header {
     border-bottom: var(--wmg-border) !important;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.92));
-    padding: 0.82rem 1rem;
+    padding: 0.72rem 0.88rem;
 }
 
 .card-body {
-    padding: 0.94rem 1rem;
+    padding: 0.82rem 0.88rem;
 }
 
 .card-title {
@@ -316,8 +317,27 @@ a:hover {
 }
 
 .table > :not(caption) > * > * {
-    padding: 0.68rem 0.78rem;
+    padding: 0.54rem 0.62rem;
     vertical-align: middle;
+}
+
+.card-table > :not(caption) > * > * {
+    line-height: 1.22;
+}
+
+.card-table td {
+    font-size: 0.865rem;
+}
+
+.card-table td.text-nowrap .btn,
+.card-table td[data-label='Actions'] .btn {
+    padding: 0.3rem 0.44rem;
+}
+
+.card-table td.text-nowrap .btn .icon,
+.card-table td[data-label='Actions'] .btn .icon {
+    width: 16px;
+    height: 16px;
 }
 
 .table thead th {
@@ -518,6 +538,122 @@ a:hover {
     border-radius: 8px;
 }
 
+/* Ultra-compact mobile tables without horizontal scrolling */
+@media (max-width: 991.98px) {
+    .table-responsive {
+        overflow: visible;
+    }
+
+    table.card-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    table.card-table,
+    table.card-table tbody,
+    table.card-table tr,
+    table.card-table td {
+        display: block;
+        width: 100%;
+    }
+
+    table.card-table {
+        border: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    table.card-table tbody tr {
+        border: var(--wmg-border);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--wmg-shadow-soft);
+        margin-bottom: 0.56rem;
+        padding: 0.36rem 0.4rem;
+    }
+
+    table.card-table tbody td {
+        border-top: 1px dashed rgba(15, 23, 42, 0.09);
+        border-bottom: 0;
+        padding: 0.33rem 0.36rem;
+        display: grid;
+        grid-template-columns: minmax(84px, 34%) 1fr;
+        gap: 0.36rem;
+        align-items: center;
+        white-space: normal !important;
+        word-break: break-word;
+        min-height: 28px;
+    }
+
+    table.card-table tbody td:first-child {
+        border-top: 0;
+    }
+
+    table.card-table tbody td::before {
+        content: attr(data-label);
+        color: #64748b;
+        font-size: 0.64rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    table.card-table tbody td[data-label='Actions'] {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.34rem;
+        border-top: 1px solid rgba(15, 23, 42, 0.11);
+        margin-top: 0.1rem;
+        padding-top: 0.45rem;
+    }
+
+    table.card-table tbody td[data-label='Actions']::before {
+        display: none;
+    }
+
+    table.card-table tbody td[data-label='Actions'] .btn {
+        min-width: 2rem;
+        padding: 0.34rem 0.44rem;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    table.card-table tbody td[data-label='Actions'] .btn .icon {
+        margin: 0 !important;
+        width: 16px;
+        height: 16px;
+    }
+
+    .fc .fc-header-toolbar.fc-toolbar {
+        gap: 0.44rem;
+        margin-bottom: 0.58rem;
+    }
+
+    .fc .fc-header-toolbar .fc-toolbar-chunk {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.34rem;
+    }
+
+    .fc .fc-button {
+        padding: 0.3rem 0.42rem;
+        font-size: 0.72rem;
+        line-height: 1.2;
+    }
+
+    .fc .fc-toolbar-title {
+        font-size: 1rem;
+    }
+}
+
 /* Existing skeleton compatibility */
 .view-loading {
     display: flex;
@@ -620,8 +756,8 @@ a:hover {
     }
 
     .table > :not(caption) > * > * {
-        padding: 0.58rem 0.62rem;
-        font-size: 0.92rem;
+        padding: 0.46rem 0.52rem;
+        font-size: 0.86rem;
     }
 
     .btn {
@@ -652,4 +788,3 @@ a:hover {
         animation: none !important;
     }
 }
-
