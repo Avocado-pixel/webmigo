@@ -39,10 +39,14 @@
     "title_step1": "SELECT GEAR",
     "title_step2": "TIME & CREW",
     "title_step3": "FINAL VALIDATION",
+    "select_branch": "SELECT ARENA",
     "select_location": "SELECT ARENA",
     "select_service": "SELECT SERVICES",
+    "select_barber": "SELECT SPECIALIST",
     "select_specialist": "SELECT SPECIALIST",
+    "date": "SELECT DATE",
     "select_date": "SELECT DATE",
+    "time": "DROP TIME",
     "select_time": "DROP TIME",
     "no_slots": "NO SLOTS AVAILABLE TODAY",
     "checking": "CHECKING SYSTEM...",
@@ -53,7 +57,8 @@
     "next": "NEXT",
     "confirm": "CONFIRM BOOKING",
     "success_title": "BOOKING CONFIRMED",
-    "success_sub": "We have sent a confirmation email to you."
+    "success_sub": "We have sent a confirmation email to you.",
+    "confirm_email": "We have sent a confirmation email to you."
   },
   "legal": {
     "cookie_title": "COOKIES & PRIVACY",

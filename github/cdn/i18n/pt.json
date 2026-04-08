@@ -39,10 +39,14 @@
     "title_step1": "SELECIONAR EQUIPAMENTO",
     "title_step2": "AGENDA E EQUIPA",
     "title_step3": "VALIDAÇÃO FINAL",
+    "select_branch": "SELECIONAR SEDE",
     "select_location": "SELECIONAR SEDE",
     "select_service": "SELECIONAR SERVIÇOS",
+    "select_barber": "SELECIONAR PROFISSIONAL",
     "select_specialist": "SELECIONAR PROFISSIONAL",
+    "date": "SELECIONAR DATA",
     "select_date": "SELECIONAR DATA",
+    "time": "HORÁRIOS DISPONÍVEIS",
     "select_time": "HORÁRIOS DISPONÍVEIS",
     "no_slots": "SEM DISPONIBILIDADE NESTE DIA",
     "checking": "A CONSULTAR SISTEMA...",
@@ -53,7 +57,8 @@
     "next": "SEGUINTE",
     "confirm": "CONFIRMAR RESERVA",
     "success_title": "RESERVA CONFIRMADA",
-    "success_sub": "Enviamos um e-mail de confirmação para si."
+    "success_sub": "Enviamos um e-mail de confirmação para si.",
+    "confirm_email": "Enviamos um e-mail de confirmação para si."
   },
   "legal": {
     "cookie_title": "COOKIES E PRIVACIDADE",
