@@ -64,5 +64,12 @@
     "cookie_title": "COOKIES Y PRIVACIDAD",
     "cookie_text": "Usamos cookies esenciales para tu seguridad.",
     "accept": "ACEPTAR"
+  },
+  "errors": {
+    "system_error": "Oops, algo salió mal. Por favor recarga la página e intenta de nuevo.",
+    "network_error": "Error de conexión. Verifica tu conexión a internet e intenta nuevamente.",
+    "timeout_error": "La solicitud tardó demasiado. Por favor intenta de nuevo.",
+    "generic_error": "Ha ocurrido un error inesperado. Nuestro equipo ha sido notificado.",
+    "please_retry": "Por favor intenta de nuevo o contacta a soporte si el problema persiste."
   }
 }

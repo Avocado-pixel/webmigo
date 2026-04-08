@@ -64,5 +64,12 @@
     "cookie_title": "COOKIES E PRIVACIDADE",
     "cookie_text": "Utilizamos cookies essenciais para operar esta plataforma de reservas de forma segura.",
     "accept": "ACEITAR"
+  },
+  "errors": {
+    "system_error": "Opa, algo deu errado. Por favor refresque a página e tente novamente.",
+    "network_error": "Erro de conexão. Verifique a sua ligação à internet e tente novamente.",
+    "timeout_error": "O pedido demorou demasiado. Por favor tente novamente.",
+    "generic_error": "Ocorreu um erro inesperado. A nossa equipa foi notificada.",
+    "please_retry": "Por favor tente novamente ou contacte o suporte se o problema persistir."
   }
 }
