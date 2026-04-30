@@ -18,8 +18,8 @@
     "ELEGANCIA", "DIFERENCIA", "TALENTO", "SOFISTICACIÓN"
   ],
   "sections": {
-    "services_title": "Nuestra Carta",
-    "services_sub": "Elige el equipamiento para tu transformación.",
+    "services_title": "Nuestros Servicios",
+    "services_sub": "Elige los servicios para tu transformación.",
     "team_title": "Especialistas",
     "team_sub": "Maestros dedicados a perfeccionar tu imagen.",
     "locations_title": "Ubicaciones",
@@ -36,7 +36,7 @@
   "booking": {
     "step": "PASO",
     "step_of": "DE",
-    "title_step1": "SELECCIONA EQUIPAMIENTO",
+    "title_step1": "SELECCIONA",
     "title_step2": "AGENDA Y EQUIPO",
     "title_step3": "VALIDACIÓN FINAL",
     "select_branch": "SELECCIONAR SEDE",
@@ -56,8 +56,8 @@
     "back": "VOLVER",
     "next": "SIGUIENTE",
     "confirm": "CONFIRMAR",
-    "success_title": "RESERVA CONFIRMADA",
-    "success_sub": "Te hemos enviado un correo de confirmación.",
+    "success_title": "ÚLTIMO PASO",
+    "success_sub": "Te hemos enviado un correo de confirmación, debes presionar el link que se encuentra en el correo para completar la reserva.",
     "confirm_email": "Te hemos enviado un correo de confirmación."
   },
   "legal": {
@@ -70,6 +70,6 @@
     "network_error": "Error de conexión. Verifica tu conexión a internet e intenta nuevamente.",
     "timeout_error": "La solicitud tardó demasiado. Por favor intenta de nuevo.",
     "generic_error": "Ha ocurrido un error inesperado. Nuestro equipo ha sido notificado.",
-    "please_retry": "Por favor intenta de nuevo o contacta a soporte si el problema persiste."
+    "please_retry": "Por favor intenta de nuevo o contacta a webmigostudio@gmail.com si el problema persiste."
   }
 }

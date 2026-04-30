@@ -12,14 +12,14 @@
     "cta": "Onde a mestria encontra a excelência. Garanta o seu lugar na nossa agenda imediatamente."
   },
   "marquee": [
-    "EXCELÊNCIA", "ATITUDE", "PRECISÃO", "VANGUARDA", "ESTILO", "PROFISSIONALISMO", "TRADIÇÃO", "MAESTRIA", 
+    "EXCELÊNCIA", "ATITUDE", "PRECISÃO", "VANGUARDA", "ESTILO", "PROFISSIONALISMO", "TRADIÇÃO", "MESTRIA", 
     "QUALIDADE", "DETALHES", "LUXO", "BEM-ESTAR", "DEDICAÇÃO", "ARTE", "INOVAÇÃO", "PRESTÍGIO", "EXPERIÊNCIA", 
     "PAIXÃO", "PERFEIÇÃO", "EXCLUSIVIDADE", "RITUAL", "VIGOR", "ESTÉTICA", "IDENTIDADE", "CUIDADO", "DISTINÇÃO", 
     "ELEGÂNCIA", "DIFERENÇA", "TALENTO", "SOFISTICAÇÃO"
   ],
   "sections": {
-    "services_title": "Nossa Carta",
-    "services_sub": "Escolha o equipamento para a sua transformação.",
+    "services_title": "Nossos Serviços",
+    "services_sub": "Escolha os serviços para a sua transformação.",
     "team_title": "Especialistas",
     "team_sub": "Mestres dedicados a aperfeiçoar a sua imagem.",
     "locations_title": "Nossas Filiais",
@@ -36,7 +36,7 @@
   "booking": {
     "step": "PASSO",
     "step_of": "DE",
-    "title_step1": "SELECIONAR EQUIPAMENTO",
+    "title_step1": "SELECIONAR OS SERVIÇOS",
     "title_step2": "AGENDA E EQUIPA",
     "title_step3": "VALIDAÇÃO FINAL",
     "select_branch": "SELECIONAR SEDE",
@@ -56,8 +56,8 @@
     "back": "VOLTAR",
     "next": "SEGUINTE",
     "confirm": "CONFIRMAR RESERVA",
-    "success_title": "RESERVA CONFIRMADA",
-    "success_sub": "Enviamos um e-mail de confirmação para si.",
+    "success_title": "ÚLTIMO PASO",
+    "success_sub": "Enviamos um e-mail de confirmação para si, deve clicar no link que se encontra no e-mail para completar a reserva.",
     "confirm_email": "Enviamos um e-mail de confirmação para si."
   },
   "legal": {
@@ -70,6 +70,6 @@
     "network_error": "Erro de conexão. Verifique a sua ligação à internet e tente novamente.",
     "timeout_error": "O pedido demorou demasiado. Por favor tente novamente.",
     "generic_error": "Ocorreu um erro inesperado. A nossa equipa foi notificada.",
-    "please_retry": "Por favor tente novamente ou contacte o suporte se o problema persistir."
+    "please_retry": "Por favor tente novamente ou contacte o webmigostudio@gmail.com se o problema persistir."
   }
 }

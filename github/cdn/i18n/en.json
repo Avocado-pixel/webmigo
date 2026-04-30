@@ -18,8 +18,8 @@
     "ELEGANCE", "DIFFERENCE", "TALENT", "SOPHISTICATION"
   ],
   "sections": {
-    "services_title": "Our Menu",
-    "services_sub": "Choose the gear for your transformation.",
+    "services_title": "Our Services",
+    "services_sub": "Choose the services for your transformation.",
     "team_title": "Specialists",
     "team_sub": "Masters dedicated to perfecting your image.",
     "locations_title": "Our Branches",
@@ -36,7 +36,7 @@
   "booking": {
     "step": "STEP",
     "step_of": "OF",
-    "title_step1": "SELECT GEAR",
+    "title_step1": "SELECT SERVICES",
     "title_step2": "TIME & CREW",
     "title_step3": "FINAL VALIDATION",
     "select_branch": "SELECT ARENA",
@@ -56,8 +56,8 @@
     "back": "BACK",
     "next": "NEXT",
     "confirm": "CONFIRM BOOKING",
-    "success_title": "BOOKING CONFIRMED",
-    "success_sub": "We have sent a confirmation email to you.",
+    "success_title": "LAST STEP",
+    "success_sub": "We have sent a confirmation email to you, please click the link in the email to complete your booking.",
     "confirm_email": "We have sent a confirmation email to you."
   },
   "legal": {
@@ -70,6 +70,6 @@
     "network_error": "Connection error. Please check your internet connection and try again.",
     "timeout_error": "The request took too long. Please try again.",
     "generic_error": "An unexpected error has occurred. Our team has been notified.",
-    "please_retry": "Please try again or contact support if the problem persists."
+    "please_retry": "Please try again or contact webmigostudio@gmail.com if the problem persists."
   }
 }
